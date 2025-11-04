@@ -19,7 +19,7 @@ const METHOD_FILES: Record<string, () => Promise<{ default: MethodContent }>> = 
   "diu-cobre": () => import("@/content/methods/diu-cobre.json"),
   "diu-hormonal": () => import("@/content/methods/diu-hormonal.json"),
   "implante-3-anos": () => import("@/content/methods/implante-3-anos.json"),
-  "implante-6-anos": () => import("@/content/methods/implante-5-anos.json"),
+  "implante-5-anos": () => import("@/content/methods/implante-5-anos.json"),
   "inyectable-mensual": () => import("@/content/methods/inyectable-mensual.json"),
   "inyectable-trimestral": () => import("@/content/methods/inyectable-trimestral.json"),
   "pildora-solo-progestina": () => import("@/content/methods/pildora-solo-progestina.json"),

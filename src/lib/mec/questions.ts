@@ -84,7 +84,6 @@ export const QUESTIONS: QuestionBase[] = [
     { id: "MEDS_ENZYME_INDUCERS", type: "boolean", label: "¿Usas medicamentos (anticonvulsivos, rifampicina, ciertos antirretrovirales) que reducen eficacia hormonal?" },
 
     // Menarquia / edad reproductiva
-    { id: "MENARQUIA_MENOR_18", type: "boolean", label: "¿Tu menarquia fue antes de los 18 años?" },
     { id: "MAYOR_45", type: "boolean", label: "¿Tienes más de 45 años?" },
 
     // Salud mental / antecedentes y preferencias
