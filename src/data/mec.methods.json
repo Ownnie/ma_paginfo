@@ -1,0 +1,46 @@
+{
+    "groups": [
+        {
+            "name": "DIU",
+            "items": [
+                "DIU_CU",
+                "DIU_LNG"
+            ]
+        },
+        {
+            "name": "Implantes",
+            "items": [
+                "IMPLANTE_3A",
+                "IMPLANTE_5A"
+            ]
+        },
+        {
+            "name": "Inyectables (AMPD)",
+            "items": [
+                "AMPD_MENSUAL",
+                "AMPD_3M"
+            ]
+        },
+        {
+            "name": "PPS",
+            "items": [
+                "PPS"
+            ]
+        },
+        {
+            "name": "Anticoncepción hormonal combinada (AHC)",
+            "items": [
+                "AHC_PILDORA",
+                "AHC_PARCHE",
+                "AHC_ANILLO"
+            ]
+        },
+        {
+            "name": "Métodos de barrera / EC",
+            "items": [
+                "BARRERA",
+                "EC"
+            ]
+        }
+    ]
+}

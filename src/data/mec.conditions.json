@@ -1,0 +1,48 @@
+{
+    "conditions": [
+        {
+            "id": "EDAD_14_MAS",
+            "label": "Tengo 14 años o más"
+        },
+        {
+            "id": "POSPARTO_DIAS",
+            "label": "Estoy en posparto y estoy lactando (días desde el parto)"
+        },
+        {
+            "id": "POSTABORTO_DIAS",
+            "label": "Días desde un aborto"
+        },
+        {
+            "id": "MIGRAÑA_AURA",
+            "label": "Tengo migraña con aura"
+        },
+        {
+            "id": "FUMA_35_MAS",
+            "label": "Fumo y tengo 35 años o más"
+        },
+        {
+            "id": "HTA_160_100",
+            "label": "Hipertensión ≥160/100 o daño vascular"
+        },
+        {
+            "id": "CANCER_MAMA",
+            "label": "Cáncer de mama (actual o antecedente reciente)"
+        },
+        {
+            "id": "TVP_EP",
+            "label": "Trombosis venosa profunda / embolia pulmonar"
+        },
+        {
+            "id": "DIABETES_VASCULAR",
+            "label": "Diabetes con daño vascular"
+        },
+        {
+            "id": "CIRROSIS_GRAVE",
+            "label": "Cirrosis grave / tumor hepático"
+        },
+        {
+            "id": "MUTACION_TROMBO",
+            "label": "Mutaciones trombogénicas (p. ej., Factor V Leiden)"
+        }
+    ]
+}

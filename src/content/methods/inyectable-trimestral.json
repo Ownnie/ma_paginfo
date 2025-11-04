@@ -1,0 +1,48 @@
+{
+    "name": "Inyectable trimestral",
+    "summary": "Anticonceptivo inyectable de progestágeno solo que se administra cada tres meses.",
+    "quick": {
+        "tipo": "Hormonal",
+        "duracion": "3 meses",
+        "hormonas": "Sí (progestágeno)",
+        "protege_its": "No",
+        "retorno_fertilidad": "4-6 meses después de última inyección"
+    },
+    "efficacy": {
+        "typical_failure_rate_pct": 3,
+        "perfect_failure_rate_pct": 0.2,
+        "nota": "valores típicos de literatura"
+    },
+    "how_it_works": [
+        "Inhibe la ovulación",
+        "Espesa el moco cervical",
+        "Altera el endometrio"
+    ],
+    "advantages": [
+        "Muy efectivo",
+        "No interfiere con el acto sexual",
+        "Requiere solo 4 inyecciones al año",
+        "Puede disminuir cólicos menstruales"
+    ],
+    "disadvantages": [
+        "Retorno demorado de fertilidad",
+        "No protege contra ITS",
+        "Efectos secundarios hormonales frecuentes",
+        "Cambios significativos en sangrado",
+        "Posible ganancia de peso"
+    ],
+    "common_effects": [
+        "Ausencia de menstruación",
+        "Sangrado irregular",
+        "Aumento de peso",
+        "Cambios de ánimo"
+    ],
+    "emergency": false,
+    "references": [
+        "American College of Obstetricians and Gynecologists. (2023). Effectiveness of Birth Control Methods. ACOG. https://www.acog.org/womens-health/infographics/effectiveness-of-birth-control-methods",
+        "American College of Obstetricians and Gynecologists. (2023). Birth Control. ACOG. https://www.acog.org/womens-health/healthy-living/birth-control",
+        "Centers for Disease Control and Prevention. (2020). U.S. Medical Eligibility Criteria for Contraceptive Use. Atlanta, GA: CDC. https://www.cdc.gov/reproductivehealth/contraception/mmwr/mec/summary.html",
+        "World Health Organization. (2018). Family Planning: A Global Handbook for Providers (3rd ed.). Geneva: WHO. https://www.who.int/publications/i/item/9789241565639",
+        "World Health Organization. (2025, July). Family planning/Contraception [Fact sheet]. https://www.who.int/es/news-room/fact-sheets/detail/family-planning-contraception"
+    ]
+}

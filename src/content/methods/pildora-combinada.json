@@ -1,0 +1,49 @@
+{
+    "name": "Píldora combinada",
+    "summary": "Anticonceptivo oral que contiene estrógeno y progestágeno, tomado diariamente para prevenir el embarazo.",
+    "quick": {
+        "tipo": "Hormonal",
+        "duracion": "Uso diario",
+        "hormonas": "Sí (estrógeno y progestágeno)",
+        "protege_its": "No",
+        "retorno_fertilidad": "Inmediato al suspender"
+    },
+    "efficacy": {
+        "typical_failure_rate_pct": 7,
+        "perfect_failure_rate_pct": 0.3,
+        "nota": "valores típicos de literatura"
+    },
+    "how_it_works": [
+        "Inhibe la ovulación",
+        "Espesa el moco cervical",
+        "Altera el endometrio"
+    ],
+    "advantages": [
+        "Muy efectivo con uso correcto",
+        "Control por la usuaria",
+        "Regula el ciclo menstrual",
+        "Reduce cólicos menstruales",
+        "Puede mejorar acné"
+    ],
+    "disadvantages": [
+        "Requiere toma diaria",
+        "No protege contra ITS",
+        "Efectos secundarios hormonales posibles",
+        "Interacciones con otros medicamentos",
+        "Contraindicado en algunas condiciones médicas"
+    ],
+    "common_effects": [
+        "Náuseas iniciales",
+        "Sangrado intermenstrual",
+        "Sensibilidad mamaria",
+        "Cambios de ánimo"
+    ],
+    "emergency": false,
+    "references": [
+        "American College of Obstetricians and Gynecologists. (2023). Effectiveness of Birth Control Methods. ACOG. https://www.acog.org/womens-health/infographics/effectiveness-of-birth-control-methods",
+        "American College of Obstetricians and Gynecologists. (2023). Birth Control. ACOG. https://www.acog.org/womens-health/healthy-living/birth-control",
+        "Centers for Disease Control and Prevention. (2020). U.S. Medical Eligibility Criteria for Contraceptive Use. Atlanta, GA: CDC. https://www.cdc.gov/reproductivehealth/contraception/mmwr/mec/summary.html",
+        "World Health Organization. (2018). Family Planning: A Global Handbook for Providers (3rd ed.). Geneva: WHO. https://www.who.int/publications/i/item/9789241565639",
+        "World Health Organization. (2025, July). Family planning/Contraception [Fact sheet]. https://www.who.int/es/news-room/fact-sheets/detail/family-planning-contraception"
+    ]
+}

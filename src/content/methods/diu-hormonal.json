@@ -1,0 +1,49 @@
+{
+    "name": "DIU hormonal",
+    "summary": "Dispositivo intrauterino que libera levonorgestrel, método anticonceptivo hormonal altamente efectivo y de larga duración.",
+    "quick": {
+        "tipo": "LARC",
+        "duracion": "3-7 años (según modelo)",
+        "hormonas": "Sí (progestágeno)",
+        "protege_its": "No",
+        "retorno_fertilidad": "Inmediato al retirar"
+    },
+    "efficacy": {
+        "typical_failure_rate_pct": 0.2,
+        "perfect_failure_rate_pct": 0.2,
+        "nota": "valores típicos de literatura"
+    },
+    "how_it_works": [
+        "El levonorgestrel espesa el moco cervical",
+        "Inhibe la ovulación en algunas mujeres",
+        "Adelgaza el endometrio",
+        "Previene la fertilización e implantación"
+    ],
+    "advantages": [
+        "Muy efectivo y de larga duración",
+        "Reduce significativamente el sangrado menstrual",
+        "No interfiere con el acto sexual",
+        "Puede ayudar con dolor menstrual",
+        "Retorno inmediato de la fertilidad al retirar"
+    ],
+    "disadvantages": [
+        "Requiere inserción por profesional de salud",
+        "Mayor costo inicial",
+        "No protege contra ITS",
+        "Posibilidad de efectos hormonales",
+        "Posible dolor durante la inserción"
+    ],
+    "common_effects": [
+        "Sangrado irregular inicial",
+        "Posible amenorrea",
+        "Efectos hormonales leves"
+    ],
+    "emergency": false,
+    "references": [
+        "American College of Obstetricians and Gynecologists. (2023). Effectiveness of Birth Control Methods. ACOG. https://www.acog.org/womens-health/infographics/effectiveness-of-birth-control-methods",
+        "American College of Obstetricians and Gynecologists. (2023). Birth Control. ACOG. https://www.acog.org/womens-health/healthy-living/birth-control",
+        "Centers for Disease Control and Prevention. (2020). U.S. Medical Eligibility Criteria for Contraceptive Use. Atlanta, GA: CDC. https://www.cdc.gov/reproductivehealth/contraception/mmwr/mec/summary.html",
+        "World Health Organization. (2018). Family Planning: A Global Handbook for Providers (3rd ed.). Geneva: WHO. https://www.who.int/publications/i/item/9789241565639",
+        "World Health Organization. (2025, July). Family planning/Contraception [Fact sheet]. https://www.who.int/es/news-room/fact-sheets/detail/family-planning-contraception"
+    ]
+}

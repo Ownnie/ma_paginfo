@@ -1,0 +1,48 @@
+{
+    "name": "DIU de cobre",
+    "summary": "Dispositivo intrauterino de cobre, método anticonceptivo no hormonal altamente efectivo y de larga duración.",
+    "quick": {
+        "tipo": "LARC",
+        "duracion": "10-12 años",
+        "hormonas": "No",
+        "protege_its": "No",
+        "retorno_fertilidad": "Inmediato al retirar"
+    },
+    "efficacy": {
+        "typical_failure_rate_pct": 0.8,
+        "perfect_failure_rate_pct": 0.6,
+        "nota": "valores típicos de literatura"
+    },
+    "how_it_works": [
+        "El cobre afecta la movilidad y función de los espermatozoides",
+        "Genera una respuesta inflamatoria local que previene la fertilización",
+        "Interfiere con la implantación si ocurre la fertilización"
+    ],
+    "advantages": [
+        "Muy efectivo y de larga duración",
+        "No contiene hormonas",
+        "No interfiere con el acto sexual",
+        "Puede usarse como anticoncepción de emergencia",
+        "Retorno inmediato de la fertilidad al retirar"
+    ],
+    "disadvantages": [
+        "Requiere inserción por profesional de salud",
+        "Puede aumentar el sangrado menstrual",
+        "No protege contra ITS",
+        "Posibilidad de expulsión (rara)",
+        "Posible dolor durante la inserción"
+    ],
+    "common_effects": [
+        "Sangrado menstrual más abundante",
+        "Calambres menstruales más intensos",
+        "Manchado intermenstrual inicial"
+    ],
+    "emergency": false,
+    "references": [
+        "American College of Obstetricians and Gynecologists. (2023). Effectiveness of Birth Control Methods. ACOG. https://www.acog.org/womens-health/infographics/effectiveness-of-birth-control-methods",
+        "American College of Obstetricians and Gynecologists. (2023). Birth Control. ACOG. https://www.acog.org/womens-health/healthy-living/birth-control",
+        "Centers for Disease Control and Prevention. (2020). U.S. Medical Eligibility Criteria for Contraceptive Use. Atlanta, GA: CDC. https://www.cdc.gov/reproductivehealth/contraception/mmwr/mec/summary.html",
+        "World Health Organization. (2018). Family Planning: A Global Handbook for Providers (3rd ed.). Geneva: WHO. https://www.who.int/publications/i/item/9789241565639",
+        "World Health Organization. (2025, July). Family planning/Contraception [Fact sheet]. https://www.who.int/es/news-room/fact-sheets/detail/family-planning-contraception"
+    ]
+}

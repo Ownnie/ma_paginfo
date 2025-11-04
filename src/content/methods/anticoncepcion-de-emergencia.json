@@ -1,0 +1,50 @@
+{
+    "name": "Postday",
+    "summary": "Método de emergencia para prevenir el embarazo después de una relación sexual sin protección o fallo del método anticonceptivo regular; no es un método anticonceptivo de uso regular.",
+    "quick": {
+        "tipo": "Hormonal",
+        "duracion": "Dosis única",
+        "hormonas": "Sí (progestágeno o combinado)",
+        "protege_its": "No",
+        "retorno_fertilidad": "Inmediato"
+    },
+    "efficacy": {
+        "typical_failure_rate_pct": 15,
+        "perfect_failure_rate_pct": 10,
+        "nota": "tasa de embarazos si se usa correctamente"
+    },
+    "how_it_works": [
+        "Retrasa o inhibe la ovulación",
+        "Puede interferir con la fertilización",
+        "No interrumpe un embarazo existente"
+    ],
+    "advantages": [
+        "Segunda oportunidad de prevenir embarazo",
+        "No sustituye un método anticonceptivo regular",
+        "Disponible sin receta",
+        "Efectivo hasta 5 días después, Efectividad mayor del 95% antes de 24 horas, a las 72 baja a 60%",
+        "Seguro para la mayoría de mujeres",
+        "No afecta fertilidad futura"
+    ],
+    "disadvantages": [
+        "No es método regular de anticoncepción",
+        "Menos efectivo que métodos regulares",
+        "No protege contra ITS",
+        "Efectos secundarios frecuentes",
+        "Puede alterar ciclo menstrual"
+    ],
+    "common_effects": [
+        "Náuseas y vómitos",
+        "Alteración del ciclo menstrual",
+        "Dolor de cabeza",
+        "Fatiga"
+    ],
+    "emergency": true,
+    "references": [
+        "American College of Obstetricians and Gynecologists. (2023). Effectiveness of Birth Control Methods. ACOG. https://www.acog.org/womens-health/infographics/effectiveness-of-birth-control-methods",
+        "American College of Obstetricians and Gynecologists. (2023). Birth Control. ACOG. https://www.acog.org/womens-health/healthy-living/birth-control",
+        "Centers for Disease Control and Prevention. (2020). U.S. Medical Eligibility Criteria for Contraceptive Use. Atlanta, GA: CDC. https://www.cdc.gov/reproductivehealth/contraception/mmwr/mec/summary.html",
+        "World Health Organization. (2018). Family Planning: A Global Handbook for Providers (3rd ed.). Geneva: WHO. https://www.who.int/publications/i/item/9789241565639",
+        "World Health Organization. (2025, July). Family planning/Contraception [Fact sheet]. https://www.who.int/es/news-room/fact-sheets/detail/family-planning-contraception"
+    ]
+}

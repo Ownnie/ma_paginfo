@@ -1,26 +1,210 @@
 @import "tailwindcss";
 
+
+/* Tokens de marca accesibles (rosa + blanco) con Tailwind v4 @theme */
+@theme {
+  --color-brand-50: #fff1f5;
+  --color-brand-100: #ffe4ed;
+  --color-brand-200: #fecdd9;
+  --color-brand-300: #fba4bd;
+  --color-brand-400: #f472a7;
+  --color-brand-500: #ec4899;
+  /* principal */
+  --color-brand-600: #db2777;
+  /* hover */
+  --color-brand-700: #be185d;
+  --color-brand-800: #9d174d;
+  --color-brand-900: #831843;
+
+
+  --color-bg: #ffffff;
+  /* fondo base */
+  --color-fg: #111827;
+  /* texto */
+  --color-muted: #6b7280;
+  /* gris 500 aprox */
+
+
+  --font-sans: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto,
+    Noto Sans, Ubuntu, Cantarell, Helvetica Neue, Arial, "Apple Color Emoji",
+    "Segoe UI Emoji";
+  --radius-lg: 1rem;
+  --radius-xl: 1.25rem;
+}
+
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  color-scheme: light;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+
+/* Utilidades */
+.container {
+  @apply mx-auto px-4 sm:px-6 lg:px-8;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+
+/* Accesibilidad: foco visible */
+:where(a, button, [role="button"], input, select, textarea):focus-visible {
+  outline: 3px solid var(--color-brand-400);
+  outline-offset: 2px;
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+
+/* Cards / Badges / Buttons */
+.card {
+  @apply rounded-2xl shadow-sm border border-neutral-200 bg-white;
+}
+
+.badge {
+  @apply inline-flex items-center gap-1 rounded-full px-2.5 py-1 text-xs font-medium bg-[--color-brand-50] text-[--color-brand-700];
+}
+
+.btn {
+  @apply inline-flex items-center justify-center rounded-full px-5 py-2.5 font-semibold transition disabled:opacity-50 disabled:cursor-not-allowed;
+}
+
+.btn-primary {
+  @apply bg-[--color-brand-500] text-white hover:bg-[--color-brand-600] shadow;
+}
+
+.btn-ghost {
+  @apply text-[--color-brand-600] hover:bg-[--color-brand-50];
+}
+
+
+/* Hero */
+.hero {
+  @apply relative overflow-hidden;
+  background: radial-gradient(1200px 600px at 10% -20%, var(--color-brand-100), transparent),
+    radial-gradient(800px 400px at 90% 0%, var(--color-brand-200), transparent),
+    linear-gradient(180deg, #fff 0%, #fff 60%, var(--color-brand-50) 100%);
+}
+
+
+/* Tipografía */
+.h1 {
+  @apply text-4xl sm:text-5xl/tight font-extrabold tracking-tight;
+}
+
+.h2 {
+  @apply text-2xl sm:text-3xl font-bold;
+}
+
+.lead {
+  @apply text-base sm:text-lg text-[--color-muted];
+}
+
+/* === utilidades visuales adicionales === */
+.section {
+  @apply py-16 sm:py-24;
+}
+
+/* fondo suave con manchas rosadas */
+.section-soft {
+  background:
+    radial-gradient(900px 260px at 0% 0%, var(--color-brand-50), transparent),
+    radial-gradient(900px 260px at 100% 100%, var(--color-brand-100), transparent);
+}
+
+/* micro-interacción en cards */
+.card-hover {
+  @apply transition hover:-translate-y-0.5 hover:shadow-md;
+}
+
+/* etiqueta pequeña (eyebrow) */
+.kicker {
+  @apply text-[10px] sm:text-xs tracking-widest uppercase font-semibold text-[--color-brand-700] bg-[--color-brand-50] rounded-full px-3 py-1;
+}
+
+/* subrayado decorativo bajo títulos */
+.underbar {
+  @apply mt-2 h-1.5 w-16 rounded-full;
+  background: linear-gradient(90deg, var(--color-brand-300), var(--color-brand-500));
+}
+
+/* CTA con gradiente */
+.gradient-cta {
+  background: linear-gradient(90deg, var(--color-brand-500), var(--color-brand-600));
+}
+
+/* tabla bonita */
+.table-wrap {
+  @apply rounded-xl ring-1 ring-neutral-200 overflow-hidden bg-white;
+}
+
+th[scope="row"] {
+  @apply text-neutral-900;
+}
+
+/* —— Extras visuales reutilizables —— */
+.section {
+  @apply py-16 sm:py-24;
+}
+
+/* manchas rosadas suaves para secciones */
+.section-soft {
+  background:
+    radial-gradient(900px 260px at 0% 0%, var(--color-brand-50), transparent),
+    radial-gradient(900px 260px at 100% 100%, var(--color-brand-100), transparent);
+}
+
+/* cards con hover suave */
+.card-hover {
+  @apply transition will-change-transform hover:-translate-y-0.5 hover:shadow-md;
+}
+
+/* mini-etiqueta */
+.kicker {
+  @apply text-[10px] sm:text-xs tracking-widest uppercase font-semibold text-[--color-brand-700] bg-[--color-brand-50] rounded-full px-3 py-1;
+}
+
+/* subrayado decorativo */
+.underbar {
+  @apply mt-2 h-1.5 w-16 rounded-full;
+  background: linear-gradient(90deg, var(--color-brand-300), var(--color-brand-500));
+}
+
+/* CTA con gradiente */
+.gradient-cta {
+  background: linear-gradient(90deg, var(--color-brand-500), var(--color-brand-600));
+}
+
+/* tabla bonita */
+.table-wrap {
+  @apply rounded-xl ring-1 ring-neutral-200 overflow-hidden bg-white;
+}
+
+/* header glass + barra fina inferior rosada */
+.header-glass {
+  @apply bg-white/70 backdrop-blur-xl border-b border-neutral-200;
+}
+
+.header-accent {
+  @apply absolute inset-x-0 -bottom-px h-[2px] bg-[--color-brand-200]/70;
+}
+
+/* enlaces con subrayado animado */
+.nav-link {
+  @apply relative py-1 transition hover:text-[--color-brand-600];
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  height: 2px;
+  width: 0;
+  background: linear-gradient(90deg, var(--color-brand-300), var(--color-brand-600));
+  transition: width .25s ease;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+/* badges con iconito */
+.badge-icon {
+  @apply inline-flex items-center gap-1 rounded-full px-2.5 py-1 text-xs font-medium bg-[--color-brand-50] text-[--color-brand-700] ring-1 ring-[--color-brand-100];
 }

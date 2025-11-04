@@ -1,0 +1,49 @@
+{
+    "name": "Parche combinado",
+    "summary": "Parche transdérmico semanal que libera estrógeno y progestágeno a través de la piel.",
+    "quick": {
+        "tipo": "Hormonal",
+        "duracion": "Semanal",
+        "hormonas": "Sí (estrógeno y progestágeno)",
+        "protege_its": "No",
+        "retorno_fertilidad": "Inmediato al suspender"
+    },
+    "efficacy": {
+        "typical_failure_rate_pct": 7,
+        "perfect_failure_rate_pct": 0.3,
+        "nota": "valores típicos de literatura"
+    },
+    "how_it_works": [
+        "Inhibe la ovulación",
+        "Espesa el moco cervical",
+        "Altera el endometrio"
+    ],
+    "advantages": [
+        "No requiere uso diario",
+        "Fácil de usar",
+        "No interfiere con el acto sexual",
+        "Control por la usuaria",
+        "Absorción constante de hormonas"
+    ],
+    "disadvantages": [
+        "Visible en la piel",
+        "No protege contra ITS",
+        "Efectos secundarios hormonales posibles",
+        "Puede despegarse",
+        "Mayor exposición a estrógenos que píldora"
+    ],
+    "common_effects": [
+        "Irritación en sitio de aplicación",
+        "Sangrado intermenstrual",
+        "Sensibilidad mamaria",
+        "Náuseas iniciales"
+    ],
+    "emergency": false,
+    "references": [
+        "American College of Obstetricians and Gynecologists. (2023). Effectiveness of Birth Control Methods. ACOG. https://www.acog.org/womens-health/infographics/effectiveness-of-birth-control-methods",
+        "American College of Obstetricians and Gynecologists. (2023). Birth Control. ACOG. https://www.acog.org/womens-health/healthy-living/birth-control",
+        "Centers for Disease Control and Prevention. (2020). U.S. Medical Eligibility Criteria for Contraceptive Use. Atlanta, GA: CDC. https://www.cdc.gov/reproductivehealth/contraception/mmwr/mec/summary.html",
+        "World Health Organization. (2018). Family Planning: A Global Handbook for Providers (3rd ed.). Geneva: WHO. https://www.who.int/publications/i/item/9789241565639",
+        "World Health Organization. (2025, July). Family planning/Contraception [Fact sheet]. https://www.who.int/es/news-room/fact-sheets/detail/family-planning-contraception"
+    ]
+}
