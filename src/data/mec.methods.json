@@ -10,8 +10,7 @@
         {
             "name": "Implantes",
             "items": [
-                "IMPLANTE_3A",
-                "IMPLANTE_5A"
+                "IMPLANTE"
             ]
         },
         {
@@ -24,7 +23,8 @@
         {
             "name": "PPS",
             "items": [
-                "PPS"
+                "PPS",
+                "EC"
             ]
         },
         {
@@ -36,10 +36,15 @@
             ]
         },
         {
-            "name": "Métodos de barrera / EC",
+            "name": "Métodos de barrera",
             "items": [
-                "BARRERA",
-                "EC"
+                "BARRERA"
+            ]
+        },
+        {
+            "name": "Métodos naturales",
+            "items": [
+                "NATURALES"
             ]
         }
     ]

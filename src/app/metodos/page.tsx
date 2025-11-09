@@ -1,120 +1,37 @@
-// app/metodos/page.tsx
+// src/app/metodos/page.tsx
 "use client";
 
 import Link from "next/link";
 import { useMemo, useState } from "react";
 import type { MethodKey } from "@/types/mec";
-import methods from "@/data/mec.methods.json";
+import groups from "@/data/mec.methods.json";
+import { METHODS_META } from "@/data/methods.meta";
 
-// ------- Metadatos de cada método (nombre, slug, tags, descripción corta) -------
-type MethodMeta = {
-    name: string;
-    slug: string;
-    tags: ("hormonal" | "no-hormonal" | "larc" | "emergencia")[];
-    blurb: string;
-};
-
-const METHOD_META: Record<MethodKey, MethodMeta> = {
-    DIU_CU: {
-        name: "DIU de Cobre",
-        slug: "diu-cobre",
-        tags: ["no-hormonal", "larc"],
-        blurb: "Anticoncepción no hormonal de larga duración. También útil como anticoncepción de emergencia.",
-    },
-    DIU_LNG: {
-        name: "DIU hormonal (LNG)",
-        slug: "diu-hormonal",
-        tags: ["hormonal", "larc"],
-        blurb: "Libera levonorgestrel localmente. Larga duración, sangrados más ligeros en muchas usuarias.",
-    },
-    IMPLANTE_3A: {
-        name: "Implante subdérmico (3 años)",
-        slug: "implante-3-anos",
-        tags: ["hormonal", "larc"],
-        blurb: "Varilla subdérmica con progestágeno. Alta eficacia por 3 años.",
-    },
-    IMPLANTE_5A: {
-        name: "Implante subdérmico (5 años)",
-        slug: "implante-5-anos",
-        tags: ["hormonal", "larc"],
-        blurb: "Varillas subdérmicas con progestágeno. Alta eficacia por 5 años.",
-    },
-    AMPD_MENSUAL: {
-        name: "Inyectable mensual",
-        slug: "inyectable-mensual",
-        tags: ["hormonal"],
-        blurb: "Inyección con hormonas combinadas en esquema mensual.",
-    },
-    AMPD_3M: {
-        name: "Inyectable trimestral",
-        slug: "inyectable-trimestral",
-        tags: ["hormonal"],
-        blurb: "Inyección solo progestina cada 3 meses (DMPA).",
-    },
-    PPS: {
-        name: "Píldora solo progestina",
-        slug: "pildora-solo-progestina",
-        tags: ["hormonal"],
-        blurb: "Píldora diaria sin estrógeno. Útil si AHC no es elegible.",
-    },
-    AHC_PILDORA: {
-        name: "Píldora combinada (estrógeno + progestina)",
-        slug: "pildora-combinada",
-        tags: ["hormonal"],
-        blurb: "Píldora diaria con estrógeno y progestina; necesita más criterios de elegibilidad.",
-    },
-    AHC_PARCHE: {
-        name: "Parche combinado",
-        slug: "parche-combinado",
-        tags: ["hormonal"],
-        blurb: "Parche semanal con estrógeno y progestina.",
-    },
-    AHC_ANILLO: {
-        name: "Anillo vaginal combinado",
-        slug: "anillo-combinado",
-        tags: ["hormonal"],
-        blurb: "Anillo mensual con estrógeno y progestina.",
-    },
-    BARRERA: {
-        name: "Métodos de barrera",
-        slug: "barrera",
-        tags: ["no-hormonal"],
-        blurb: "Preservativo externo/interno, diafragma, espermicida. También protegen contra ITS (preservativo).",
-    },
-    EC: {
-        name: "Postday",
-        slug: "anticoncepcion-de-emergencia",
-        tags: ["emergencia"],
-        blurb: "Para uso después de una relación sin protección. Opción no hormonal: DIU-Cu.",
-    },
-};
-
-// ------- Filtros visibles en UI -------
 type FilterKey = "all" | "hormonal" | "no-hormonal" | "larc" | "emergencia";
 
 const FILTERS: { key: FilterKey; label: string }[] = [
     { key: "all", label: "Todos" },
     { key: "hormonal", label: "Hormonales" },
     { key: "no-hormonal", label: "No hormonales" },
-    { key: "larc", label: "LARC" },
-    { key: "emergencia", label: "Emergencia" },
+    { key: "larc", label: "Larga duración" },
+    { key: "emergencia", label: "Emergencia" }
 ];
 
-// ------- Componentes auxiliares -------
 function Badge({ children }: { children: React.ReactNode }) {
     return <span className="badge">{children}</span>;
 }
 
-function MethodCard({ keyName }: { keyName: MethodKey }) {
-    const meta = METHOD_META[keyName];
+function MethodCard({ k }: { k: MethodKey }) {
+    const meta = METHODS_META[k];
+
     return (
-        <Link
-            href={`/metodos/${meta.slug}`}
-            className="block card p-5 sm:p-6 card-hover h-full"
-        >
+        <Link href={`/metodos/${meta.slug}`} className="block card p-5 sm:p-6 card-hover h-full">
             <div className="flex items-start justify-between gap-3">
                 <h3 className="text-base sm:text-lg font-semibold">{meta.name}</h3>
-                <span className="inline-block h-2.5 w-2.5 rounded-full bg-[--color-brand-400]" aria-hidden />
+                <span
+                    className="inline-block h-2.5 w-2.5 rounded-full bg-[--color-brand-400]"
+                    aria-hidden
+                />
             </div>
             <p className="mt-2 text-sm text-neutral-700">{meta.blurb}</p>
 
@@ -130,31 +47,30 @@ function MethodCard({ keyName }: { keyName: MethodKey }) {
     );
 }
 
-// ------- Página principal -------
 export default function Page() {
     const [active, setActive] = useState<FilterKey>("all");
     const [q, setQ] = useState("");
 
-    // index rápido por búsqueda
-    const idx = useMemo(() => {
+    const searchIndex = useMemo(() => {
         const map = new Map<MethodKey, string>();
-        (Object.keys(METHOD_META) as MethodKey[]).forEach((k) => {
-            const m = METHOD_META[k];
-            map.set(k, `${m.name} ${m.blurb} ${m.tags.join(" ")}`.toLowerCase());
+        (Object.keys(METHODS_META) as MethodKey[]).forEach((k) => {
+            const m = METHODS_META[k];
+            map.set(
+                k,
+                `${m.name} ${m.blurb} ${m.tags.join(" ")}`.toLowerCase()
+            );
         });
         return map;
     }, []);
 
-    function matchesFilters(m: MethodKey) {
-        if (active === "all") return true;
-        return METHOD_META[m].tags.includes(active as any);
-    }
+    const matchesFilter = (k: MethodKey) =>
+        active === "all" ? true : METHODS_META[k].tags.includes(active as any);
 
-    function matchesQuery(m: MethodKey) {
+    const matchesQuery = (k: MethodKey) => {
         if (!q.trim()) return true;
-        const hay = idx.get(m) ?? "";
-        return hay.includes(q.toLowerCase().trim());
-    }
+        const hay = searchIndex.get(k) ?? "";
+        return hay.includes(q.trim().toLowerCase());
+    };
 
     return (
         <section className="section section-soft">
@@ -164,23 +80,25 @@ export default function Page() {
                     <h1 className="h1 mt-2">Métodos anticonceptivos</h1>
                     <div className="underbar" />
                     <p className="mt-3 text-neutral-700">
-                        Consulta las opciones disponibles (hormonales y no hormonales), con foco en claridad y comparación.
+                        Selecciona cada método para ver cómo funciona, su eficacia, ventajas, posibles efectos
+                        y si puede ser adecuado para ti.
                     </p>
                 </div>
 
-                {/* Controles: búsqueda + filtros */}
+                {/* Controles */}
                 <div className="mt-6 grid gap-3 sm:grid-cols-3">
                     <div className="sm:col-span-2">
-                        <label className="sr-only" htmlFor="q">Buscar</label>
+                        <label className="sr-only" htmlFor="q">
+                            Buscar método
+                        </label>
                         <input
                             id="q"
                             value={q}
                             onChange={(e) => setQ(e.target.value)}
-                            placeholder="Buscar: ‘implante’, ‘parche’, ‘DIU’…"
+                            placeholder="Buscar: “implante”, “DIU”, “barrera”, “naturales”…"
                             className="w-full rounded-full border border-neutral-300 bg-white px-5 py-3 outline-none focus:ring-2 focus:ring-[--color-brand-300]"
                         />
                     </div>
-
                     <div className="flex flex-wrap gap-2">
                         {FILTERS.map((f) => (
                             <button
@@ -197,15 +115,20 @@ export default function Page() {
                     </div>
                 </div>
 
-                {/* Grid por grupos (del JSON) */}
-                <div className="mt-8 space-y-8">
-                    {methods.groups.map((group) => {
-                        // Filtramos items según filtro + búsqueda
-                        const visible = (group.items as MethodKey[]).filter(
-                            (m) => matchesFilters(m) && matchesQuery(m)
-                        );
+                {/* Comparar CTA */}
+                <div className="mt-4">
+                    <Link href="/comparar" className="inline-flex text-sm text-[--color-brand-700] underline">
+                        Comparar hasta 3 métodos lado a lado →
+                    </Link>
+                </div>
 
-                        if (visible.length === 0) return null;
+                {/* Grupos */}
+                <div className="mt-8 space-y-8">
+                    {groups.groups.map((group) => {
+                        const visible = (group.items as MethodKey[]).filter(
+                            (m) => METHODS_META[m] && matchesFilter(m) && matchesQuery(m)
+                        );
+                        if (!visible.length) return null;
 
                         return (
                             <section key={group.name}>
@@ -217,7 +140,7 @@ export default function Page() {
 
                                 <div className="mt-4 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
                                     {visible.map((m) => (
-                                        <MethodCard key={m} keyName={m} />
+                                        <MethodCard key={m} k={m} />
                                     ))}
                                 </div>
                             </section>
@@ -225,11 +148,10 @@ export default function Page() {
                     })}
                 </div>
 
-                {/* Aviso educativo al final */}
                 <div className="mt-10 card p-5 sm:p-6">
                     <p className="text-sm text-neutral-700">
-                        <strong>Nota:</strong> Esta información es educativa y orientativa. No reemplaza una consulta médica presencial.
-                        La elegibilidad final debe ser confirmada por un profesional de salud.
+                        <strong>Nota:</strong> Esta plataforma es educativa y orientativa. No reemplaza la
+                        evaluación individual por un profesional de salud.
                     </p>
                 </div>
             </div>

@@ -1,6 +1,6 @@
 {
     "name": "DIU de cobre",
-    "summary": "Dispositivo intrauterino de cobre, método anticonceptivo no hormonal altamente efectivo y de larga duración.",
+    "summary": "Dispositivo intrauterino de cobre, método anticonceptivo no hormonal altamente efectivo y de larga duración. También puede utilizarse como anticoncepción de emergencia si se inserta dentro de las primeras 96 horas después de una relación sexual sin protección.",
     "quick": {
         "tipo": "LARC",
         "duracion": "10-12 años",
@@ -8,6 +8,7 @@
         "protege_its": "No",
         "retorno_fertilidad": "Inmediato al retirar"
     },
+    "image": "/images/methods/diu-cobre.png",
     "efficacy": {
         "typical_failure_rate_pct": 0.8,
         "perfect_failure_rate_pct": 0.6,
@@ -22,7 +23,7 @@
         "Muy efectivo y de larga duración",
         "No contiene hormonas",
         "No interfiere con el acto sexual",
-        "Puede usarse como anticoncepción de emergencia",
+        "Puede usarse como anticoncepción de emergencia si se inserta dentro de las primeras 96 horas después del evento",
         "Retorno inmediato de la fertilidad al retirar"
     ],
     "disadvantages": [
@@ -37,7 +38,7 @@
         "Calambres menstruales más intensos",
         "Manchado intermenstrual inicial"
     ],
-    "emergency": false,
+    "emergency": true,
     "references": [
         "American College of Obstetricians and Gynecologists. (2023). Effectiveness of Birth Control Methods. ACOG. https://www.acog.org/womens-health/infographics/effectiveness-of-birth-control-methods",
         "American College of Obstetricians and Gynecologists. (2023). Birth Control. ACOG. https://www.acog.org/womens-health/healthy-living/birth-control",

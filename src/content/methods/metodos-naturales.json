@@ -1,0 +1,39 @@
+{
+    "name": "Métodos naturales",
+    "summary": "Métodos de reconocimiento de la fertilidad basados en la observación del ciclo (calendario, días fértiles, moco cervical, temperatura basal, método sintotérmico). No usan hormonas ni dispositivos.",
+    "quick": {
+        "tipo": "No hormonal",
+        "duracion": "Continuo mientras se apliquen correctamente",
+        "hormonas": "No",
+        "protege_its": "No",
+        "retorno_fertilidad": "No se modifica"
+    },
+    "efficacy": {
+        "typical_failure_rate_pct": 13,
+        "perfect_failure_rate_pct": 3,
+        "nota": "Varía según el método específico y la adherencia."
+    },
+    "how_it_works": [
+        "Identifican los días fértiles mediante signos del ciclo (flujo cervical, temperatura, calendario, etc.).",
+        "Se evita la penetración vaginal o se usa otro método en los días fértiles."
+    ],
+    "advantages": [
+        "No usan hormonas.",
+        "Favorecen el conocimiento del propio ciclo.",
+        "Sin efectos secundarios farmacológicos."
+    ],
+    "disadvantages": [
+        "Requieren educación, registro constante y motivación.",
+        "Eficacia menor en uso típico, especialmente con ciclos irregulares.",
+        "No protegen contra ITS."
+    ],
+    "common_effects": [],
+    "emergency": false,
+    "references": [
+        "American College of Obstetricians and Gynecologists. (2023). Effectiveness of Birth Control Methods. ACOG. https://www.acog.org/womens-health/infographics/effectiveness-of-birth-control-methods",
+        "American College of Obstetricians and Gynecologists. (2023). Birth Control. ACOG. https://www.acog.org/womens-health/healthy-living/birth-control",
+        "Centers for Disease Control and Prevention. (2020). U.S. Medical Eligibility Criteria for Contraceptive Use. Atlanta, GA: CDC. https://www.cdc.gov/reproductivehealth/contraception/mmwr/mec/summary.html",
+        "World Health Organization. (2018). Family Planning: A Global Handbook for Providers (3rd ed.). Geneva: WHO. https://www.who.int/publications/i/item/9789241565639",
+        "World Health Organization. (2025, July). Family planning/Contraception [Fact sheet]. https://www.who.int/es/news-room/fact-sheets/detail/family-planning-contraception"
+    ]
+}

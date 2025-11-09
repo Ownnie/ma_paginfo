@@ -4,7 +4,7 @@ import type { Category, MethodKey, Answers } from "@/types/mec";
 /** Lista canónica de métodos evaluados en el algoritmo */
 export const ALL_METHODS: MethodKey[] = [
     "DIU_CU", "DIU_LNG",
-    "IMPLANTE_3A", "IMPLANTE_5A",
+    "IMPLANTE",
     "AMPD_MENSUAL", "AMPD_3M",
     "PPS",
     "AHC_PILDORA", "AHC_PARCHE", "AHC_ANILLO",
@@ -28,13 +28,13 @@ export const CONDITION_TO_METHOD_CATEGORY: Record<
 
     // Cáncer de mama actual → toda hormonación =4; DIU-Cu=1.
     CANCER_MAMA_ACTUAL: {
-        DIU_LNG: 4, IMPLANTE_3A: 4, IMPLANTE_5A: 4, AMPD_MENSUAL: 4, AMPD_3M: 4, PPS: 4,
+        DIU_LNG: 4, IMPLANTE: 4, AMPD_MENSUAL: 4, AMPD_3M: 4, PPS: 4,
         AHC_PILDORA: 4, AHC_PARCHE: 4, AHC_ANILLO: 4,
     },
 
     // Antecedente (≥5 años sin enfermedad): hormonales=3 (excepto DIU-Cu=1).
     CANCER_MAMA_5Y: {
-        DIU_LNG: 3, IMPLANTE_3A: 3, IMPLANTE_5A: 3, AMPD_MENSUAL: 3, AMPD_3M: 3, PPS: 3,
+        DIU_LNG: 3, IMPLANTE: 3, AMPD_MENSUAL: 3, AMPD_3M: 3, PPS: 3,
         AHC_PILDORA: 3, AHC_PARCHE: 3, AHC_ANILLO: 3,
     },
 
@@ -47,7 +47,7 @@ export const CONDITION_TO_METHOD_CATEGORY: Record<
     TVP_EP: { AHC_PILDORA: 4, AHC_PARCHE: 4, AHC_ANILLO: 4, AMPD_MENSUAL: 3, AMPD_3M: 3 },
 
     // ICTUS / ACV: contraindica AHC; precaución con AMPD/Implante
-    ICTUS: { AHC_PILDORA: 4, AHC_PARCHE: 4, AHC_ANILLO: 4, AMPD_MENSUAL: 3, AMPD_3M: 3, IMPLANTE_3A: 3, IMPLANTE_5A: 3, DIU_CU: 1, DIU_LNG: 1, PPS: 1 },
+    ICTUS: { AHC_PILDORA: 4, AHC_PARCHE: 4, AHC_ANILLO: 4, AMPD_MENSUAL: 3, AMPD_3M: 3, IMPLANTE: 3, DIU_CU: 1, DIU_LNG: 1, PPS: 1 },
 
     // Mutación trombogénica
     MUTACION_TROMBO: { AHC_PILDORA: 4, AHC_PARCHE: 4, AHC_ANILLO: 4 },
@@ -58,16 +58,16 @@ export const CONDITION_TO_METHOD_CATEGORY: Record<
     // Cirrosis grave (descompensada) / adenoma hepático
     CIRROSIS_GRAVE: {
         AHC_PILDORA: 4, AHC_PARCHE: 4, AHC_ANILLO: 4,
-        DIU_LNG: 3, IMPLANTE_3A: 3, IMPLANTE_5A: 3, AMPD_MENSUAL: 3, AMPD_3M: 3, PPS: 3,
+        DIU_LNG: 3, IMPLANTE: 3, AMPD_MENSUAL: 3, AMPD_3M: 3, PPS: 3,
     },
 
     // Cardiopatía isquémica / ACV eleva riesgo con CHC
     CARDIO_ISQUEMICA: { AHC_PILDORA: 4, AHC_PARCHE: 4, AHC_ANILLO: 4 },
     // Lupus con anticuerpos antifosfolípidos
-    LES_ANTIFOSFOLIPIDOS: { AHC_PILDORA: 4, AHC_PARCHE: 4, AHC_ANILLO: 4, AMPD_MENSUAL: 3, AMPD_3M: 3, IMPLANTE_3A: 3, IMPLANTE_5A: 3, DIU_LNG: 3, DIU_CU: 1 },
+    LES_ANTIFOSFOLIPIDOS: { AHC_PILDORA: 4, AHC_PARCHE: 4, AHC_ANILLO: 4, AMPD_MENSUAL: 3, AMPD_3M: 3, IMPLANTE: 3, DIU_LNG: 3, DIU_CU: 1 },
 
     // Endometriosis / dismenorrea intensa: hormonales suelen mejorar
-    DISMENORREA_INTENSA: { DIU_CU: 3, DIU_LNG: 1, IMPLANTE_3A: 1, IMPLANTE_5A: 1, AMPD_MENSUAL: 1, AMPD_3M: 1, PPS: 1, AHC_PILDORA: 1, AHC_PARCHE: 1, AHC_ANILLO: 1 },
+    DISMENORREA_INTENSA: { DIU_CU: 3, DIU_LNG: 1, IMPLANTE: 1, AMPD_MENSUAL: 1, AMPD_3M: 1, PPS: 1, AHC_PILDORA: 1, AHC_PARCHE: 1, AHC_ANILLO: 1 },
 
     // EPI activa -> DIU contraindicado
     EPI_ACTIVA: { DIU_CU: 4, DIU_LNG: 4 },
@@ -79,7 +79,7 @@ export const CONDITION_TO_METHOD_CATEGORY: Record<
     OBESIDAD_IMC30: { AHC_PILDORA: 3, AHC_PARCHE: 3, AHC_ANILLO: 3 },
 
     // Medicación que reduce eficacia hormonal
-    MEDS_ENZYME_INDUCERS: { AHC_PILDORA: 3, AHC_PARCHE: 3, AHC_ANILLO: 3, IMPLANTE_3A: 3, IMPLANTE_5A: 3, PPS: 3 },
+    MEDS_ENZYME_INDUCERS: { AHC_PILDORA: 3, AHC_PARCHE: 3, AHC_ANILLO: 3, IMPLANTE: 3, PPS: 3 },
 
     // Menarquia <18 o edad >45 → precaución con AHC/AMPD
     MENARQUIA_MENOR_18: { AHC_PILDORA: 3, AHC_PARCHE: 3, AHC_ANILLO: 3, AMPD_MENSUAL: 3, AMPD_3M: 3 },
@@ -93,7 +93,7 @@ export const CONDITION_TO_METHOD_CATEGORY: Record<
 
     // Embarazo actual: según tu instrucción, no indicar métodos
     EMBARAZO_ACTUAL: {
-        DIU_CU: 4, DIU_LNG: 4, IMPLANTE_3A: 4, IMPLANTE_5A: 4, AMPD_MENSUAL: 4, AMPD_3M: 4, PPS: 4,
+        DIU_CU: 4, DIU_LNG: 4, IMPLANTE: 4, AMPD_MENSUAL: 4, AMPD_3M: 4, PPS: 4,
         AHC_PILDORA: 4, AHC_PARCHE: 4, AHC_ANILLO: 4, BARRERA: 4, EC: 4,
     },
 
@@ -155,6 +155,13 @@ export function applyDynamicRules(
             worsenOne("AHC_PARCHE", chcCat, `LACTANCIA:${lactaSel}`);
             worsenOne("AHC_ANILLO", chcCat, `LACTANCIA:${lactaSel}`);
         }
+    }
+
+    // FIX aborto séptico
+    const abortoTipo = String(answers.ABORTO_RECIENTE_TIPO ?? "NO");
+    if (abortoTipo === "ABORTO_SEPTICO") {
+        worsenOne("DIU_CU", 4, "ABORTO_SEPTICO");
+        worsenOne("DIU_LNG", 4, "ABORTO_SEPTICO");
     }
 
     // Si la usuaria indica posparto y no amamanta (intervalos)

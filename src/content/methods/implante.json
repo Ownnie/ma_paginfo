@@ -1,13 +1,14 @@
 {
-    "name": "Implante anticonceptivo (3 años)",
-    "summary": "Implante subdérmico que libera progestágeno, método anticonceptivo hormonal altamente efectivo y de larga duración.",
+    "name": "Implante anticonceptivo",
+    "summary": "El Implante subdérmico es un método anticonceptivo hormonal altamente efectivo y de larga duración.",
     "quick": {
         "tipo": "LARC",
-        "duracion": "3 años",
+        "duracion": "3 años, 4 años o 5 años según el tipo",
         "hormonas": "Sí (progestágeno)",
         "protege_its": "No",
         "retorno_fertilidad": "Rápido al retirar"
     },
+    "image": "/images/methods/implante.png",
     "efficacy": {
         "typical_failure_rate_pct": 0.1,
         "perfect_failure_rate_pct": 0.1,

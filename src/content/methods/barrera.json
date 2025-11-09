@@ -1,6 +1,6 @@
 {
     "name": "Métodos de barrera",
-    "summary": "Incluye preservativos masculinos, femeninos y otros métodos que crean una barrera física para prevenir el embarazo.",
+    "summary": "Incluye preservativos masculinos, preservativos femeninos, diafragma, esponja y otros métodos que crean una barrera física para prevenir el embarazo.",
     "quick": {
         "tipo": "No hormonal",
         "duracion": "Un solo uso",
@@ -8,6 +8,7 @@
         "protege_its": "Sí (preservativos)",
         "retorno_fertilidad": "Inmediato"
     },
+    "image": "/images/methods/barrera.png",
     "efficacy": {
         "typical_failure_rate_pct": 13,
         "perfect_failure_rate_pct": 2,
@@ -36,6 +37,12 @@
         "Posibles reacciones alérgicas"
     ],
     "emergency": false,
+    "subtypes": [
+        "Preservativo masculino",
+        "Preservativo femenino",
+        "Diafragma",
+        "Esponja vaginal"
+    ],
     "references": [
         "American College of Obstetricians and Gynecologists. (2023). Effectiveness of Birth Control Methods. ACOG. https://www.acog.org/womens-health/infographics/effectiveness-of-birth-control-methods",
         "American College of Obstetricians and Gynecologists. (2023). Birth Control. ACOG. https://www.acog.org/womens-health/healthy-living/birth-control",

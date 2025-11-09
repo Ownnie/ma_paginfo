@@ -1,18 +1,25 @@
-// types/mec.ts
+// src/types/mec.ts
+
 export type Category = 1 | 2 | 3 | 4;
 
 export type MethodKey =
-    | "DIU_CU" | "DIU_LNG"
-    | "IMPLANTE_3A" | "IMPLANTE_5A"
-    | "AMPD_MENSUAL" | "AMPD_3M"
+    | "DIU_CU"
+    | "DIU_LNG"
+    | "IMPLANTE"
+    | "AMPD_MENSUAL"
+    | "AMPD_3M"
     | "PPS" // Píldora solo progestina
-    | "AHC_PILDORA" | "AHC_PARCHE" | "AHC_ANILLO" // combinados
-    | "BARRERA" | "EC";
+    | "AHC_PILDORA"
+    | "AHC_PARCHE"
+    | "AHC_ANILLO"
+    | "BARRERA"
+    | "EC" // Píldora de emergencia
+    | "NATURALES"; // Nuevos: métodos basados en reconocimiento de fertilidad
 
 export interface MethodResult {
     key: MethodKey;
     category: Category;
-    reason: string[]; // etiquetas de condiciones que “empeoraron” la categoría
+    reason: string[]; // etiquetas/condiciones que empeoraron la categoría
 }
 
 export type AnswerValue = boolean | number | string | null;
@@ -27,5 +34,5 @@ export interface QuestionBase {
     min?: number;
     max?: number;
     options?: { value: string; label: string }[];
-    when?: { id: string; equals: boolean | string | number }[]; // lógica de despliegue
+    when?: { id: string; equals: boolean | string | number }[];
 }

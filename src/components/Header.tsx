@@ -13,6 +13,7 @@ export default function Header() {
                 <nav className="hidden sm:flex items-center gap-6 text-sm">
                     <Link href="/metodos" className="nav-link">Métodos</Link>
                     <Link href="/test" className="nav-link">Test</Link>
+                    <Link href="/comparar" className="nav-link">Compara tus Métodos Anticonceptivos</Link>
                     <Link href="/privacidad" className="nav-link">Privacidad</Link>
                 </nav>
 
