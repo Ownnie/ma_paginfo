@@ -44,8 +44,7 @@ const METHOD_FILES: Record<string, () => Promise<{ default: MethodContent }>> = 
 };
 
 const METHOD_IMAGES: Record<string, string> = {
-  "diu-cobre": "/images/methods/diu.png",
-  "diu-hormonal": "/images/methods/diu.png",
+  "diu-cobre": "/images/methods/diu-cobre.png",
   "implante": "/images/methods/implante.png",
   "barrera": "/images/methods/barrera.png",
 };
